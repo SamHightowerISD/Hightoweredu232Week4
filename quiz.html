@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructional Design Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .quiz-container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question h3 {
+            font-size: 1.1em;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Instructional Design Quiz</h1>
+        <form id="quizForm">
+            <div class="question">
+                <h3>1. What does the acronym ADDIE stand for in instructional design?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="A"> A. Analysis, Design, Development, Implementation, Evaluation</label>
+                    <label><input type="radio" name="q1" value="B"> B. Assess, Develop, Implement, Design, Evaluate</label>
+                    <label><input type="radio" name="q1" value="C"> C. Analyze, Deliver, Implement, Design, Evaluate</label>
+                    <label><input type="radio" name="q1" value="D"> D. Analyze, Decide, Develop, Instruct, Evaluate</label>
+                </div>
+            </div>
+
+            <!-- Add more questions as per the original quiz structure -->
+            <!-- Add 9 more questions here -->
+
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        function submitQuiz() {
+            var total = 10;
+            var score = 0;
+
+            // Question 1
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            if (q1 && q1.value === 'A') {
+                score++;
+            }
+
+            // Question 2 (add validation for all the questions)
+
+            var result = document.getElementById('result');
+            result.innerHTML = `You scored ${score} out of ${total}.`;
+        }
+    </script>
+</body>
+</html>
