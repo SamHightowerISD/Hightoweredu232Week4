@@ -4,86 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instructional Design Quiz</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
-        }
-        .quiz-container {
-            max-width: 600px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .question {
-            margin-bottom: 15px;
-        }
-        .question h3 {
-            font-size: 1.1em;
-        }
-        .options label {
-            display: block;
-            margin: 5px 0;
-        }
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        .result {
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>Instructional Design Quiz</h1>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul style="list-style-type:none; padding:0; margin:0;">
+                <li style="display:inline; margin-right:20px;"><a href="index.html">Home</a></li>
+                <li style="display:inline; margin-right:20px;"><a href="content1.html">Typography</a></li>
+                <li style="display:inline; margin-right:20px;"><a href="content2.html">Color Contrast</a></li>
+                <li style="display:inline; margin-right:20px;"><a href="content3.html">White Space</a></li>
+                <li style="display:inline; margin-right:20px;"><a href="content4.html">Alignment</a></li>
+                <li style="display:inline; margin-right:20px;"><a href="content5.html">Consistency</a></li>
+                <li style="display:inline; margin-right:20px;"><a href="quiz.html">Take the Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Quiz Content -->
+    <main>
+        <h1>Instructional Design Principles Quiz</h1>
         <form id="quizForm">
+            <!-- Question 1 - Typography -->
             <div class="question">
-                <h3>1. What does the acronym ADDIE stand for in instructional design?</h3>
+                <h3>1. Which of the following is considered a good practice when choosing typography for digital content?</h3>
                 <div class="options">
-                    <label><input type="radio" name="q1" value="A"> A. Analysis, Design, Development, Implementation, Evaluation</label>
-                    <label><input type="radio" name="q1" value="B"> B. Assess, Develop, Implement, Design, Evaluate</label>
-                    <label><input type="radio" name="q1" value="C"> C. Analyze, Deliver, Implement, Design, Evaluate</label>
-                    <label><input type="radio" name="q1" value="D"> D. Analyze, Decide, Develop, Instruct, Evaluate</label>
+                    <label><input type="radio" name="q1" value="A"> A. Use more than three different fonts to add variety</label>
+                    <label><input type="radio" name="q1" value="B"> B. Ensure all text is in a decorative font for aesthetics</label>
+                    <label><input type="radio" name="q1" value="C"> C. Use no more than two fonts for readability and consistency</label>
+                    <label><input type="radio" name="q1" value="D"> D. Use only bold fonts for all text elements</label>
                 </div>
             </div>
 
-            <!-- Add more questions as per the original quiz structure -->
-            <!-- Add 9 more questions here -->
+            <!-- Question 2 - Color Contrast -->
+            <div class="question">
+                <h3>2. What is the primary reason for using strong color contrast between text and background?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="A"> A. To make the content look more vibrant</label>
+                    <label><input type="radio" name="q2" value="B"> B. To ensure readability and accessibility for all users</label>
+                    <label><input type="radio" name="q2" value="C"> C. To reduce the need for images</label>
+                    <label><input type="radio" name="q2" value="D"> D. To match brand colors</label>
+                </div>
+            </div>
+
+            <!-- Question 3 - White Space -->
+            <div class="question">
+                <h3>3. Why is white space important in instructional design?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="A"> A. It reduces the need for additional content</label>
+                    <label><input type="radio" name="q3" value="B"> B. It makes the page look empty</label>
+                    <label><input type="radio" name="q3" value="C"> C. It enhances readability and helps avoid cluttered layouts</label>
+                    <label><input type="radio" name="q3" value="D"> D. It allows for more decorative elements</label>
+                </div>
+            </div>
+
+            <!-- Question 4 - Alignment -->
+            <div class="question">
+                <h3>4. Which alignment type is typically preferred for body text in instructional materials?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="A"> A. Right-aligned text</label>
+                    <label><input type="radio" name="q4" value="B"> B. Center-aligned text</label>
+                    <label><input type="radio" name="q4" value="C"> C. Left-aligned text</label>
+                    <label><input type="radio" name="q4" value="D"> D. Justified text</label>
+                </div>
+            </div>
+
+            <!-- Question 5 - Consistency -->
+            <div class="question">
+                <h3>5. How does consistency benefit the design of instructional materials?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="A"> A. It ensures that learners feel comfortable and familiar with the layout</label>
+                    <label><input type="radio" name="q5" value="B"> B. It allows for frequent changes in navigation and layout</label>
+                    <label><input type="radio" name="q5" value="C"> C. It makes the content unpredictable and exciting</label>
+                    <label><input type="radio" name="q5" value="D"> D. It is only necessary for quizzes and assessments</label>
+                </div>
+            </div>
 
             <button type="button" onclick="submitQuiz()">Submit Quiz</button>
         </form>
+
         <div id="result" class="result"></div>
-    </div>
+    </main>
 
     <script>
         function submitQuiz() {
-            var total = 10;
+            var total = 5;
             var score = 0;
 
             // Question 1
             var q1 = document.querySelector('input[name="q1"]:checked');
-            if (q1 && q1.value === 'A') {
+            if (q1 && q1.value === 'C') {
                 score++;
             }
 
-            // Question 2 (add validation for all the questions)
+            // Question 2
+            var q2 = document.querySelector('input[name="q2"]:checked');
+            if (q2 && q2.value === 'B') {
+                score++;
+            }
+
+            // Question 3
+            var q3 = document.querySelector('input[name="q3"]:checked');
+            if (q3 && q3.value === 'C') {
+                score++;
+            }
+
+            // Question 4
+            var q4 = document.querySelector('input[name="q4"]:checked');
+            if (q4 && q4.value === 'C') {
+                score++;
+            }
+
+            // Question 5
+            var q5 = document.querySelector('input[name="q5"]:checked');
+            if (q5 && q5.value === 'A') {
+                score++;
+            }
 
             var result = document.getElementById('result');
             result.innerHTML = `You scored ${score} out of ${total}.`;
         }
     </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Instructional Design Principles. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
+
